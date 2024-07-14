@@ -1,6 +1,9 @@
+import { Component } from 'react';
 import Cell from './cell.component';
 
-const Board = ({cells, onCellClick,completed, winningCombo}) => {
+const Board = ({cells,winningCombo, completed, onCellClick}) => {
+
+    
 
     return (
         <div className='board'>
@@ -9,9 +12,9 @@ const Board = ({cells, onCellClick,completed, winningCombo}) => {
                     <Cell id={id}
                         key={id}
                         value={value}
-                        onCellClicked={onCellClick}
                         completed={completed}
                         winner={winningCombo.includes(id)}
+                        onCellClicked={onCellClick}
                     />
                 ))
             }
